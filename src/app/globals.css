@@ -172,3 +172,8 @@ a{ color:inherit; }
     border-radius: 18px;
   }
 }
+
+/* === FIX: remove unwanted horizontal scroll on mobile === */
+html, body {
+  overflow-x: hidden !important;
+}
