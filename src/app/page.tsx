@@ -5,40 +5,45 @@ export default function Page() {
     <main className="container">
       <header style={{ display: "flex", justifyContent: "space-between", gap: 14, flexWrap: "wrap" }}>
         <div>
-          <div className="pill">VIP Radar · Футбол</div>
-          <h1 className="h1" style={{ marginTop: 14 }}>📡 Catch the tempo</h1>
-          <p className="sub">Премиум-шортлисты и алерты: ТБ, ИТБ, ОЗ — под темп лайва.</p>
+          <div className="pill">налитика  бучение  ез ставок</div>
+          <h1 className="h1" style={{ marginTop: 14 }}> Catch the tempo</h1>
+          <p className="sub">
+            ини-приложение в Telegram: сценарии матчей, вероятности и разборы как в матч-центре , но без приёма ставок.
+          </p>
         </div>
 
         <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-          <a className="btn" href="/guides">Гайды →</a>
-          <a className="btn btnPrimary" href={BOT_URL}>Открыть в Telegram</a>
+          <a className="btn" href="/mini">ткрыть Mini App </a>
+          <a className="btn" href="/guides">бучение </a>
+          <a className="btn btnPrimary" href={BOT_URL}>ткрыть бота</a>
         </div>
       </header>
 
       <section className="grid">
         <div className="glass card">
-          <div className="cardTitle">Тоталы (ТБ/ТМ)</div>
-          <div className="cardText">Шортлист по лигам/командам + лайв-подтверждение.</div>
+          <div className="cardTitle">Сценарии матчей</div>
+          <div className="cardText">ишем что вероятнее произойдёт и почему: темп, моменты, состав, форма.</div>
         </div>
 
         <div className="glass card">
-          <div className="cardTitle">ИТБ (инд. тоталы)</div>
-          <div className="cardText">Берём “кто забьёт”, когда исход шумный.</div>
+          <div className="cardTitle">ероятности</div>
+          <div className="cardText">ценка вероятности по логике и данным (когда будут). ез обещаний и без гарантий.</div>
         </div>
 
         <div className="glass card">
-          <div className="cardTitle">ОЗ (оба забьют)</div>
-          <div className="cardText">Только когда моменты есть у обеих.</div>
+          <div className="cardTitle">атч-центр</div>
+          <div className="cardText">Табличный стиль как у : удобно смотреть лиги, матчи, обновления и разборы.</div>
         </div>
 
         <div className="glass card">
-          <div className="cardTitle">Лайв-алерты</div>
-          <div className="cardText">Гол, перерыв/конец, красная — трекаем выбранное.</div>
+          <div className="cardTitle">бучение</div>
+          <div className="cardText">ороткие уроки: как мыслить вероятностями, ошибки новичков, дисциплина, риск.</div>
         </div>
       </section>
 
-      <footer className="footer">Ставки — это риск. Только аналитика, без гарантий.</footer>
+      <footer className="footer">
+         исклеймер: это аналитика и обучение. Ставки не принимаем. ичего не гарантируем.
+      </footer>
     </main>
   );
 }
