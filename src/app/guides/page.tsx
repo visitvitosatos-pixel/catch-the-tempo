@@ -1,32 +1,41 @@
 ﻿export default function Guides() {
   return (
-    <main className="container">
-      <div className="glass" style={{ padding: 22 }}>
-        <div className="pill">бучение  ез ставок</div>
-        <h1 className="h1" style={{ fontSize: 34, marginTop: 12 }}>айды</h1>
-        <p className="sub">
-          десь будут короткие уроки: как строить сценарии матча, как думать вероятностями, как не попадать в когнитивные ловушки.
-          икаких ставок, VIP-сигналов и гарантий.
+    <main className="container" style={{ paddingTop: 16 }}>
+      <div className="glass" style={{ padding: 16 }}>
+        <div className="pill">  бучение</div>
+        <h1 className="h1" style={{ marginTop: 10 }}>айды</h1>
+        <p className="sub" style={{ marginTop: 6 }}>
+          оротко и по делу: как читать линию, как не тильтовать и как мыслить вероятностями.
+          то симулятор  денег нет.
         </p>
 
-        <div className="grid" style={{ marginTop: 16 }}>
+        <div className="grid" style={{ marginTop: 14 }}>
           <div className="glass card">
             <div className="cardTitle">1) ероятности</div>
-            <div className="cardText">очему уверен на 100%  плохая фраза, и как оценивать риск.</div>
+            <div className="cardText">очему 100% не бывает. ак оценивать риск и выбирать рынки.</div>
           </div>
           <div className="glass card">
-            <div className="cardTitle">2) Сценарии</div>
-            <div className="cardText">ак описывать матч: темп, качество моментов, контратаки, стандарты.</div>
+            <div className="cardTitle">2) ынки</div>
+            <div className="cardText">1X2, , Т/Т, форы  что означает каждая линия и как читать.</div>
           </div>
           <div className="glass card">
-            <div className="cardTitle">3) шибки</div>
-            <div className="cardText">моции, выборка, подтверждение своей версии  что ломает аналитику.</div>
+            <div className="cardTitle">3) исциплина</div>
+            <div className="cardText">лавное  стабильность. икаких догонов и эмоций.</div>
+          </div>
+          <div className="glass card">
+            <div className="cardTitle">4) налитика</div>
+            <div className="cardText">орма, темп, моменты, состав. очему хайп часто обманывает.</div>
           </div>
         </div>
 
-        <div style={{ display: "flex", gap: 10, marginTop: 18, flexWrap: "wrap" }}>
-          <a className="btn" href="/mini">ткрыть Mini App</a>
-          <a className="btn" href="/"> азад</a>
+        <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 14 }}>
+          <a className="btn btnPrimary" href="/prematch"> игру (Prematch)</a>
+          <a className="btn" href="/live">LIVE</a>
+          <a className="btn" href="/">а главную</a>
+        </div>
+
+        <div className="footer" style={{ marginTop: 14 }}>
+          исклеймер: это игра-симулятор. Coins не продаются и не выводятся.
         </div>
       </div>
     </main>

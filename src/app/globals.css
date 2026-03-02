@@ -92,3 +92,66 @@ a{ color:inherit; }
   border:1px solid transparent;
 }
 .langLink:hover{ opacity:1; border-color: var(--border); background: rgba(255,255,255,.04); }
+/* --- FIX: clipped first letters (Telegram/Vercel/Chrome) --- */
+.btn, .pill, .cardTitle, .cardText, .h1, .sub {
+  position: relative;
+  z-index: 2;
+}
+
+.btn, .pill, .glass, .card {
+  overflow: visible !important;
+}
+
+/* tiny left padding to prevent edge clipping */
+.btn, .pill, .cardTitle, .cardText {
+  padding-left: calc(var(--fixPad, 0px) + 2px);
+}
+
+/* if you use ::before overlays on glass/buttons, keep them behind text */
+.btn::before, .glass::before, .card::before,
+.btn::after,  .glass::after,  .card::after {
+  z-index: 1;
+}
+
+/* ================================
+   FIX: letters clipped on cards/buttons
+   ================================ */
+
+/* remove any edge masks that cut the left side */
+.glass, .card, .btn, .pill,
+.glass::before, .glass::after,
+.card::before, .card::after,
+.btn::before, .btn::after {
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+  clip-path: none !important;
+}
+
+/* don't clip children */
+.glass, .card, .btn, .pill {
+  overflow: visible !important;
+}
+
+/* keep overlays behind text (if you have them) */
+.glass::before, .glass::after,
+.card::before, .card::after,
+.btn::before, .btn::after {
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+/* force text above overlays */
+.glass *, .card *, .btn *, .pill * {
+  position: relative;
+  z-index: 2 !important;
+}
+
+/* extra safe left padding for text blocks inside cards */
+.cardTitle, .cardText, .sub, .h1, .pill, .btn {
+  padding-left: 8px !important;
+}
+
+/* avoid glyph cropping on some Chrome/Windows combos */
+* {
+  text-rendering: geometricPrecision;
+}
